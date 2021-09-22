@@ -1,0 +1,90 @@
+
+<ion-content>
+
+  <div class="onboard-main">
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button color="primary" (click)="goNext()">
+        <ion-icon name="chevron-forward"></ion-icon> 
+      </ion-fab-button>
+    </ion-fab>
+    <div class="onboard-top">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+        <ion-button color="primary" (click)="goBack()">
+          <ion-icon name="chevron-back" slot="icon-only"> </ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+      <ion-button color="dark" (click)="skipBtn()" color="primary-shade" [routerLink]="['/welcome']" fill="clear">
+        Skip
+      </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div> 
+    <div class="onboard-bot">
+      <ion-slides pager="true" #mainSlides>
+        <ion-slide class="ion-padding">
+          <div>
+            <img src="../../assets/slide_5.png">
+  
+          <div class="slider-text">
+            <h2>Easy Access!</h2>
+    
+            <p>
+              Create an account or login to,
+              start exploring opportunities best suited for you on your smartphone!
+            </p>
+          </div>
+          </div>
+          
+        </ion-slide>
+        <ion-slide class="ion-padding">
+          <div>
+            <img src="../../assets/slide_4.png">
+  
+          <div class="slider-text">
+            <h2>Easy Access!</h2>
+    
+            <p>
+              Create an account or login to,
+              start exploring opportunities best suited for you on your smartphone!
+            </p>
+          </div>
+          </div>
+          
+        </ion-slide>
+        <ion-slide class="ion-padding">
+          <div>
+            <img src="../../assets/slide_6.png">
+  
+          <div class="slider-text">
+            <h2>Easy Access!</h2>
+    
+            <p>
+              Create an account or login to,
+              start exploring opportunities best suited for you on your smartphone!
+            </p>
+          </div>
+          </div>
+          
+        </ion-slide>
+        <ion-slide class="ion-padding">
+          <div>
+            <img src="../../assets/slide_1.png">
+  
+          <div class="slider-text">
+            <h2>Easy Access!</h2>
+    
+            <p>
+              Create an account or login to,
+              start exploring opportunities best suited for you on your smartphone!
+            </p>
+          </div>
+      <ion-button   class="btn1" color="primary" [routerLink]="['/welcome']">GET STARTED</ion-button>
+          </div>
+          
+        </ion-slide>
+      </ion-slides>
+  </div>
+  </div>
+</ion-content> 

@@ -1,0 +1,45 @@
+<ion-app>
+  
+    <ion-menu  side="start" type="overlay" class='my-custom-menu'>
+    <ion-header>
+      <ion-toolbar>   
+        <ion-title>Car wash App</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+     <ion-list>
+       <ion-menu-toggle>
+       <ion-item lines="none" [routerLink]="['/vehicles']">
+         <ion-icon name="car" slot="start"></ion-icon>
+         <ion-label>Vehicles</ion-label>
+       </ion-item>
+       </ion-menu-toggle>
+       <ion-menu-toggle>
+       <ion-item lines="none" [routerLink]="['/preferences']">
+         <ion-icon name="people" slot="start"></ion-icon>
+         <ion-label>Preferences</ion-label>
+       </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+      <ion-item lines="none" [routerLink]="['/history']">
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>History</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+      <ion-menu-toggle>
+       <ion-item [routerLink]="['/help']">
+         <ion-icon name="settings" slot="start"></ion-icon>
+         <ion-label>Help</ion-label>
+       </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+       <ion-item lines="none" (click)="onLogout()" button>
+         <ion-icon name="exit" slot="start"></ion-icon>
+         <ion-label>Logout</ion-label>
+       </ion-item>
+      </ion-menu-toggle>
+     </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet> 
+  </ion-app>

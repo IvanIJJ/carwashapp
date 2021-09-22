@@ -1,0 +1,37 @@
+
+
+<ion-app>
+  
+  <ion-tabs #tabs (ionTabsDidChange)="setCurrentTab($event)">
+    <ion-fab 
+    *ngIf="selectTab && !isHide"
+    [class]="selectTab == 'booking' ? 'right-align animated'  : (selectTab == 'profile' ? 'left-align animated' :'animated')"
+    vertical="bottom" [horizontal]="selectTab == 'home' ? 'start' : (selectTab == 'checkout' ? 'end' : 'center')" translucent="true">
+        <ion-fab-button>
+          <ion-icon [name]="getIcon() "></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon *ngIf="selectTab != 'home'" name="home-outline"></ion-icon>
+        <ion-label *ngIf= "selectTab == 'home'">Home</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile">
+        <ion-icon *ngIf="selectTab != 'profile'" name="person-outline"></ion-icon>
+        <ion-label *ngIf= "selectTab == 'profile'">Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="booking">
+        <ion-icon *ngIf="selectTab != 'booking'" name="basket-outline"></ion-icon>
+        <ion-label *ngIf= "selectTab == 'booking'">Booking</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button tab="checkout">
+        <ion-icon *ngIf="selectTab != 'checkout'" name="card-outline"></ion-icon>
+        <ion-label *ngIf= "selectTab == 'checkout'">Checkout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-app>
+  

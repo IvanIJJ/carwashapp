@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'onboarding',
     pathMatch: 'full'
   },
   {
@@ -47,7 +47,6 @@ const routes: Routes = [
     path: 'help',
     loadChildren: () => import('./menu/help/help.module').then( m => m.HelpPageModule)
   },
- 
   
 ];
 @NgModule({

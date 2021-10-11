@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ADD VEHICLE</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+   <ion-card class="modal">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          Vehicle Type
+        </ion-label>
+      </ion-list-header>
+    
+      <ion-item >
+        <div class="flex-container">
+            <div  (click)="test('car')" > <i class="fas fa-car" id="car" ></i> </div>
+            <div  (click)="test('suv')" ><i class="fas fa-car-side" id="suv"></i></div>
+            <div  (click)="test('bakkie')"><i class="fas fa-truck-pickup" id="bakkie"></i></div>  
+            <div  (click)="test('taxi')"><i class="fas fa-bus" id="taxi"></i></div>
+        </div>
+
+      </ion-item>
+    
+      <ion-item >
+        <ion-label >Manufacturer</ion-label>
+        <ion-select >
+          <ion-item  *ngFor="let car of car" >
+            <ion-select-option>{{car}}</ion-select-option>
+            <ion-input [(ngModel)]= "manufacturer"></ion-input>
+          </ion-item>
+        </ion-select>
+      </ion-item>
+       
+      <ion-item>
+        <ion-label position="floating" [(ngModel)]= "registration">Registration No.</ion-label>
+        <ion-input ></ion-input>
+      </ion-item>
+     
+     <ion-buttons  slot="end">
+      <ion-button class="btn" (click)="dismiss()" ><ion-icon  name="close"></ion-icon></ion-button>
+      <ion-button class="btn"><ion-icon  name="add-circle-outline" (click)="submit()" ></ion-icon></ion-button>
+     </ion-buttons>
+     
+    </ion-list>
+   </ion-card>
+</ion-content>

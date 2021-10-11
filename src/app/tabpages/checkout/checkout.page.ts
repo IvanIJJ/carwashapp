@@ -24,13 +24,13 @@ export class CheckoutPage implements OnInit {
     for (let obj of items) {
       if (selected[obj.id]) {
         selected[obj.id].count++;
-      }else{
+      }else{ 
         selected[obj.id] = {...obj, count: 1};
       } 
     } 
     this.selectedItems = Object.keys(selected).map(key => selected[key])
     console.log('items:', this.selectedItems);
-    this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.price),0 )
+    this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.price),0 );
   }
 
 }

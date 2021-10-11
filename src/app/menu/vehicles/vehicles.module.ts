@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { VehiclesPageRoutingModule } from './vehicles-routing.module';
 
 import { VehiclesPage } from './vehicles.page';
+import { ModalComponent } from 'src/app/modal/modal.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { VehiclesPage } from './vehicles.page';
     IonicModule,
     VehiclesPageRoutingModule
   ],
-  declarations: [VehiclesPage]
+  declarations: [
+    VehiclesPage,
+    ModalComponent
+  ]
 })
 export class VehiclesPageModule {}
